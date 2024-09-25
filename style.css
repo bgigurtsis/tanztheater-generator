@@ -1,0 +1,264 @@
+/* General page layout */
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.description {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.page-content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#generator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#generator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+select, select option {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.checkbox-label {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+
+}
+
+.checkbox-input {
+    width: 19px;
+    height: 18px;
+    margin-right: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem; /* Reduce padding */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.5rem; /* Reduce font size */
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-bottom: 0.4rem;
+    width: 100%;
+    max-width: 200px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: -.49rem;
+    margin-left: 1rem;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.item {
+    background: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    white-space: pre-line;
+    text-align: center;
+}
+
+.item.principles {
+    background: #007bff;
+    color: white;
+}
+
+.item.dynamics {
+    background: #4CAF50;
+    color: white;
+}
+
+.item.chestPosition {
+    background: #ff6347;
+    color: white;
+    margin-top: 0.2rem;
+    font-size: 1.3rem;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    margin: -0.2rem 0;
+    text-align: center;
+}
+
+select.disabled {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+@media (min-width: 768px) {
+    .page {
+        flex-direction: row;
+    }
+
+    .page-content {
+        flex-direction: column;
+    }
+
+    .description {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+
+    #generator-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start; /* Ensure proper alignment */
+    }
+
+    #generator {
+        width: 48%;
+    }
+
+    #result-container {
+        width: 48%;
+        align-items: flex-start; /* Ensure proper alignment */
+    }
+
+    .item-container {
+        flex-direction: column;
+        align-items: flex-start; /* Ensure proper alignment */
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .item {
+        width: 99%;
+    }
+
+    .arrow {
+        width: 100%;
+    }
+    
+    .checkbox-label {
+	    margin-top: 0.3rem;
+	}
+}
+
+
+@media (max-width: 767px) {
+    label, select, .checkbox-label {
+        font-size: 1.75rem; /* Increase font size */
+    }
+
+    select {
+        padding: 0.75rem; /* Increase padding */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #333;
+        font-size: 1.75rem; /* Increase font size for select elements */
+    }
+
+    .checkbox-group {
+        margin-bottom: 2rem; /* Increase margin for better spacing */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .checkbox-label {
+        font-size: 1.75rem; /* Increase font size */
+        margin-right: 1rem; /* Ensure margin for better spacing */
+    }
+
+    .checkbox-input {
+        width: 28px; /* Increase checkbox size */
+        height: 28px; /* Increase checkbox size */
+    }
+
+    button {
+        padding: 8rem 1.5rem; /* Adjust padding */
+        font-size: 1.75rem; /* Increase font size */
+    }
+}

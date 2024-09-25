@@ -1,0 +1,266 @@
+<div class="page">
+<div class="page-content"><div class="description"><h1>Dynamics and Principles Generator</h1>
+      <span class="dynamic">
+        <br>
+Generate a random list of Tanztheater dynamics and / or principles. The dynamics / principles are sourced from choreographer Adrian Look: <a href="http://www.lookatmovement.co.uk/tanztheater-course/" target="_blank"><i><u>lookatmovement.co.uk</u></i>.</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br><br>
+You can select:
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+        <br>
+        <ol>
+          <li>Number of dynamics or principles to generate (item)<br></li>
+          <li>Type of item to generate (dynamic, principle, or both)<br></li>
+          <li>How many principles you want inbetween each dynamic (when type <b>Dynamic and Principles</b> is selected)&nbsp;<br></li>
+          <li>The speak delay (how long in seconds it will wait in between saying each dynamic or principle).<br></li>
+        </ol>
+        <br>
+Additionally, you can use the checkboxes to add modifiers such as chest position, body parts, or adjectives.
+ &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br><br>
+There is also a ‘<b>Speak</b>’ function that will say the generated list using your speakers.
+ &nbsp; &nbsp; &nbsp; &nbsp;<br>
+</span></div><div id="generator-container"><div id="generator"><div class="input-group">
+          <label for="count">Number of items to generate (1-8): &nbsp; &nbsp; &nbsp;</label>
+          <select id="count" name="count">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="1">1</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="2">2</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="3">3</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="4">4</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="5">5</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="6">6</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="7">7</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="8">8</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</select>
+          <label for="type"><br>
+Types of items to generate: &nbsp;&nbsp;</label>
+          <select id="type">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="dynamics">Dynamics</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="principles">Principles</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="both">Principles and Dynamics</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</select>
+          <label for="principlesCount"><br>
+Number of principles between dynamics:</label>
+          <select disabled="" id="principlesCount">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="default">Default (1-2)</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="1">1</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="2">2</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="3">3</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="4">4</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</select>
+          <label for="speakDelay"><br>
+Speak delay (seconds):</label>
+          <select id="speakDelay">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option selected="" value="2">Default (2)</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="1">1</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="3">3</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="4">4</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="5">5</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="6">6</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="7">7</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="8">8</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="9">9</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<option value="10">10</option>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</select>
+        </div>
+        <div class="checkbox-group">
+          <label class="checkbox-label" for="chestPosition">
+Chest position&nbsp;</label><input class="checkbox-input" id="chestPosition" name="chestPosition" type="checkbox">
+          <label class="checkbox-label" for="bodyParts">Body parts &nbsp;&nbsp;</label>
+          <input class="checkbox-input" id="bodyParts" name="bodyParts" type="checkbox">
+          <label class="checkbox-label" for="adjectives">Adjectives</label>
+          <input class="checkbox-input" id="adjectives" name="adjectives" type="checkbox">
+        </div>
+        <button id="generateButton">Generate</button>
+        <button id="speakButton">Speak</button>
+      </div>
+<div id="result-container"><div id="result"><div class="item-container"><div class="item dynamics">Powerful Drop
+(Forehead)</div><div class="item chestPosition">Rotation</div></div><div class="arrow">↓</div><div class="item-container"><div class="item principles">Distance</div></div><div class="arrow">↓</div><div class="item-container"><div class="item dynamics">Dynamic Throw
+(Inside Line of Arm)</div><div class="item chestPosition">High Release</div></div><div class="arrow">↓</div><div class="item-container"><div class="item principles">Relaxation</div></div><div class="arrow">↓</div><div class="item-container"><div class="item dynamics">Vigorous Flick
+(Inside Knee)</div><div class="item chestPosition">Tilt</div></div><div class="arrow">↓</div><div class="item-container"><div class="item principles">Placement</div></div><div class="arrow">↓</div><div class="item-container"><div class="item dynamics">Powerful Punch
+(Hip Bone)</div><div class="item chestPosition">Contraction</div></div></div>
+      </div>
+&nbsp; &nbsp;&nbsp;</div>
+  </div>
+</div>
+<script>
+  (function () {
+    const dynamics = [
+      'Swing', 'Flick', 'Throw', 'Punch', 'Melt',
+      'Push', 'Accent', 'Suck', 'Pull', 'Bounce',
+      'Sustained', 'Drop', 'Reach', 'Brush', 'Whip'
+    ];
+
+    const principles = [
+      'Relaxation', 'Resistance', 'Elongation',
+      'Distance', 'Relation of body parts', 'Placement', 'Rhythm',
+      'One body part leads'
+    ];
+
+    const bodyParts = [
+      'Back of Wrist', 'Front of Wrist', 'Back of Hand', 'Front of Hand', 'Inside Line of Arm', 'Outside Line of Arm',
+      'Front of leg line', 'Back of leg line', 'Knee', 'Front of Shoulder Blade', 'Back of Shoulder Blade', 'Inside Thigh',
+      'Outside Thigh', 'Sole of Foot', 'Toes', 'Fingertips', 'Elbow', 'Hip Bone', 'Sternum', 'Rib Cage', 'Pelvis',
+      'Forearm (Slice)', 'Ankle', 'Inner Elbow', 'Outer Elbow', 'Shoulder Blade', 'Upper Spine', 'Middle Spine',
+      'Lower Spine', 'Side of Waist', 'Chest', 'Head', 'Forehead', 'Eyebrow', 'Back of Head', 'Crown of Head',
+      'Inside Knee', 'Outside Knee'
+    ];
+
+    const chestPositions = [
+      'Tilt', 'Contraction', 'High Release', 'Rotation'
+    ];
+
+    const adjectives = [
+      'Fluid', 'Abrupt', 'Graceful', 'Sharp', 'Sad',
+      'Powerful', 'Delicate', 'Ecstatic', 'Subtle', 'Vigorous',
+      'Intense', 'Depressed', 'Crisp', 'Explosive',
+      'Controlled', 'Bold', 'Fragile', 'Dynamic', 'Elegant'
+    ];
+
+    document.getElementById('type').addEventListener('change', function () {
+      const type = document.getElementById('type').value;
+      const principlesCountSelect = document.getElementById('principlesCount');
+
+      if (type === 'both') {
+        principlesCountSelect.disabled = false;
+      } else {
+        principlesCountSelect.disabled = true;
+      }
+    });
+
+    document.getElementById('generateButton').addEventListener('click', function () {
+      console.log('Generate button clicked');
+      const count = parseInt(document.getElementById('count').value);
+      const type = document.getElementById('type').value;
+      const principlesCount = document.getElementById('principlesCount').value;
+      const includeBodyParts = document.getElementById('bodyParts').checked;
+      const includeChestPosition = document.getElementById('chestPosition').checked;
+      const includeAdjectives = document.getElementById('adjectives').checked;
+
+      let selectedItems = [];
+      let usedChestPositions = new Set();
+
+      if (type === 'dynamics' || type === 'both') {
+        const shuffledDynamics = dynamics.sort(() => 0.5 - Math.random());
+        selectedItems = selectedItems.concat(shuffledDynamics.slice(0, count));
+      }
+
+      if (type === 'principles' || type === 'both') {
+        const shuffledPrinciples = principles.sort(() => 0.5 - Math.random());
+        if (type === 'both') {
+          let result = [];
+          let principleIndex = 0;
+          for (let i = 0; i < selectedItems.length; i++) {
+            result.push(selectedItems[i]);
+            if (i < selectedItems.length - 1) {
+              let numberOfPrinciples;
+              if (principlesCount === 'default') {
+                numberOfPrinciples = Math.floor(Math.random() * 2) + 1; // Min 1, Max 2
+              } else {
+                numberOfPrinciples = parseInt(principlesCount);
+              }
+              numberOfPrinciples = Math.min(shuffledPrinciples.length - principleIndex, numberOfPrinciples);
+              for (let j = 0; j < numberOfPrinciples; j++) {
+                if (principleIndex < shuffledPrinciples.length) {
+                  result.push(shuffledPrinciples[principleIndex]);
+                  principleIndex++;
+                }
+              }
+            }
+          }
+          selectedItems = result;
+        } else {
+          selectedItems = shuffledPrinciples.slice(0, count);
+        }
+      }
+
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = '';
+      selectedItems.forEach((item, index) => {
+        const itemContainer = document.createElement('div');
+        itemContainer.className = 'item-container';
+
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'item';
+
+        if (principles.includes(item)) {
+          itemDiv.className += ' principles';
+          if (type !== 'both' && includeBodyParts) {
+            const bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            itemDiv.textContent = `${item}\n(${bodyPart})`;
+          } else {
+            itemDiv.textContent = item;
+          }
+        } else if (dynamics.includes(item)) {
+          itemDiv.className += ' dynamics';
+          if (includeBodyParts) {
+            const bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            itemDiv.textContent = `${item}\n(${bodyPart})`;
+          } else {
+            itemDiv.textContent = item;
+          }
+
+          if (includeAdjectives) {
+            const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+            itemDiv.textContent = `${adjective} ${itemDiv.textContent}`;
+          }
+        }
+
+        itemContainer.appendChild(itemDiv);
+
+        if (includeChestPosition && dynamics.includes(item)) {
+          let chestPosition;
+          do {
+            chestPosition = chestPositions[Math.floor(Math.random() * chestPositions.length)];
+          } while (usedChestPositions.has(chestPosition) && usedChestPositions.size < chestPositions.length);
+
+          usedChestPositions.add(chestPosition);
+
+          const chestDiv = document.createElement('div');
+          chestDiv.className = 'item chestPosition';
+          chestDiv.textContent = chestPosition;
+          itemContainer.appendChild(chestDiv);
+        }
+
+        resultDiv.appendChild(itemContainer);
+
+        if (index < selectedItems.length - 1) {
+          const arrowDiv = document.createElement('div');
+          arrowDiv.className = 'arrow';
+          arrowDiv.textContent = '↓';
+          resultDiv.appendChild(arrowDiv);
+        }
+      });
+    });
+
+    let speaking = false;
+    let speechQueue = [];
+
+    document.getElementById('speakButton').addEventListener('click', function () {
+      if (speaking) return; // Prevent multiple invocations
+      speaking = true;
+      window.speechSynthesis.cancel(); // Clear any existing speech
+      const items = document.querySelectorAll('#result .item');
+      speechQueue = Array.from(items).map(item => item.textContent.replace(/\n/g, ', '));
+
+      speakNextItem();
+    });
+
+    function speakNextItem() {
+      if (speechQueue.length === 0) {
+        speaking = false;
+        return;
+      }
+
+      const text = speechQueue.shift();
+      const speech = new SpeechSynthesisUtterance(text);
+
+      speech.onend = function () {
+        const delay = parseInt(document.getElementById('speakDelay').value) * 1000;
+        setTimeout(speakNextItem, delay);
+      };
+
+      console.log(`Speaking: ${text}`);
+      window.speechSynthesis.speak(speech);
+    }
+
+    document.getElementById('principlesCount').disabled = true;
+  })();
+</script>
